@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Assignment_19-06-2024</h1>
+    <h2>Marks</h2>
+
+    <label for="marks">Marks Obtained</label>
+    <input id="marks" type="number">
+    <button id="check" onclick="action()">Check</button>
+    <span id="result">Result here </span>
+    <script>
+        function action(){
+        let marksObtained = document.getElementById('marks').value;
+        let checkButton = document.getElementById("#check");
+        let result = '';
+       
+            if(marksObtained > 90){
+                result = 'AA';
+            }else if (marksObtained > 80 && marksObtained <= 90){
+                result = 'AB';
+            }else if (marksObtained >70 && marksObtained<=80){
+                result = 'BB';
+            }else if (marksObtained > 60  && marksObtained<= 70 ){
+                result = 'BC';
+            }
+            else if (marksObtained > 50  && marksObtained<= 60 ){
+                result = 'CC';
+            }
+            else if (marksObtained >40  && marksObtained<= 50){
+                result = 'CD';
+            }
+            else if (marksObtained >30   && marksObtained<= 40 ){
+               result = 'DD';
+            }
+            else if (marksObtained <= 30){
+                result = 'FF';
+            }
+            else{
+                result = 'enter valid marks';
+            }
+           document.getElementById('result').innerText='grade is : ' + result;
+                
+            }
+    </script>
+
+</body>
+</html>
